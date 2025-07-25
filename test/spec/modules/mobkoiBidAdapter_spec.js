@@ -153,7 +153,7 @@ describe('Mobkoi bidding Adapter', function () {
       delete bidderRequest.bids[0].params.integrationEndpoint;
 
       const request = spec.buildRequests(bidderRequest.bids, bidderRequest);
-      expect(request.url).to.equal(DEFAULT_PREBID_JS_INTEGRATION_ENDPOINT + '/bid');
+      expect(request.url).to.equal(DEFAULT_PREBID_JS_INTEGRATION_ENDPOINT);
     });
 
     it('should set ext.mobkoi.integration_type to "pbjs" in the ORTB request', function () {

@@ -8,7 +8,7 @@ const GVL_ID = 898;
 // IntegrationType is defined in the backend
 const INTEGRATION_TYPE_PREBID_JS = 'pbjs';
 
-export const DEFAULT_PREBID_JS_INTEGRATION_ENDPOINT = 'https://pbjs.mobkoi.com';
+export const DEFAULT_PREBID_JS_INTEGRATION_ENDPOINT = 'https://pbjs.mobkoi.com/bid';
 
 const PUBLISHER_PARAMS = {
   /**
@@ -67,7 +67,7 @@ export const spec = {
    * Make a server request from the list of BidRequests.
    */
   buildRequests(prebidBidRequests, prebidBidderRequest) {
-    const integrationEndpoint = utils.getIntegrationEndpoint(prebidBidderRequest) + '/bid';
+    const integrationEndpoint = utils.getIntegrationEndpoint(prebidBidderRequest);
 
     return {
       method: 'POST',
